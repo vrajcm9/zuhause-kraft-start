@@ -1,0 +1,14 @@
+
+services:
+  ihrezuhauseberatung-website:
+    image: ihrezuhauseberatung-image:latest  # Replace with your image name
+    container_name: ihrezuhauseberatung-website-container
+    restart: unless-stopped
+    networks:
+      - supabase-net
+  
+
+networks:
+  supabase-net:
+    name: supabase-net
+    external: true
